@@ -1,3 +1,7 @@
+# https://github.com/addi0123-0123/lab10-SL-JL.git
+# Partner 1: Skylar Liu
+# Partner 2: Jeffrey Lis
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
