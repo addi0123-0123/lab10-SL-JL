@@ -46,11 +46,6 @@ class TestCalculator(unittest.TestCase):
         # use same technique from test_divide_by_zero
         with self.assertRaises(ValueError):
             logarithm(0,5)
-        # self.assertEqual(logarithm(0, 16), ValueError)
-        # self.assertEqual(logarithm(16, 0), ValueError)
-        # self.assertEqual(logarithm(-2, 16), ValueError)
-        # self.assertEqual(logarithm(2, -16), ValueError)
-        # self.assertEqual(logarithm(2, 1), ValueError)
     # ##########################
     
     ######## Partner 1
