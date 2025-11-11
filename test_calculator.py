@@ -8,20 +8,14 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual(add(1, 2), 3, True)
-        self.assertEqual(add(1, -2), -1, True)
-        self.assertEqual(add(1, 0), 1, True)
-        self.assertEqual(add(0, 0), 0, True)
-        self.assertEqual(add(0, 0), 1, False)
-        self.assertEqual(add(-1, -1), -2, True)
+        self.assertEqual(add(1,2), 3)
+        self.assertEqual(add(0,9), 9)
+        self.assertEqual(add(1.5,0.5), 3)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(subtract(1, 2), 1, False)
-        self.assertEqual(subtract(2, 1), 1, True)
-        self.assertEqual(subtract(1, -2), -1, False)
-        self.assertEqual(subtract(1, 0), 0, False)
-        self.assertEqual(subtract(0, 0), 0, True)
-        self.assertEqual(subtract(0, 0), 1, False)
+        self.assertEqual(subtract(2,1), 1)
+        self.assertEqual(subtract(9,0), 9)
+        self.assertEqual(subtract(1.5,0.5), 1)
     # ##########################
 
     ######## Partner 1
@@ -47,17 +41,19 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(div(0, 0), ZeroDivisionError)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(logarithm(2,8), 3, True)
-        self.assertEqual(logarithm(2, 8), 2, False)
-        self.assertEqual(logarithm(2, 16), 2, False)
+        self.assertEqual(logarithm(2,8), 3)
+        self.assertEqual(logarithm(3, 81), 4)
+        self.assertEqual(logarithm(5, 125), 3)
 
     def test_log_invalid_base(self): # 1 assertion
         # use same technique from test_divide_by_zero
-        self.assertEqual(logarithm(0, 16), ValueError)
-        self.assertEqual(logarithm(16, 0), ValueError)
-        self.assertEqual(logarithm(-2, 16), ValueError)
-        self.assertEqual(logarithm(2, -16), ValueError)
-        self.assertEqual(logarithm(2, 1), ValueError)
+        with self.assertRaises(ValueError):
+            logarithm(0,5)
+        # self.assertEqual(logarithm(0, 16), ValueError)
+        # self.assertEqual(logarithm(16, 0), ValueError)
+        # self.assertEqual(logarithm(-2, 16), ValueError)
+        # self.assertEqual(logarithm(2, -16), ValueError)
+        # self.assertEqual(logarithm(2, 1), ValueError)
     # ##########################
     
     ######## Partner 1
