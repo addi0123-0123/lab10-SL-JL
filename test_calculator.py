@@ -16,12 +16,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-1, -1), -2, True)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(1, 2), 1, False)
-        self.assertEqual(sub(2, 1), 1, True)
-        self.assertEqual(sub(1, -2), -1, False)
-        self.assertEqual(sub(1, 0), 0, False)
-        self.assertEqual(sub(0, 0), 0, True)
-        self.assertEqual(sub(0, 0), 1, False)
+        self.assertEqual(subtract(1, 2), 1, False)
+        self.assertEqual(subtract(2, 1), 1, True)
+        self.assertEqual(subtract(1, -2), -1, False)
+        self.assertEqual(subtract(1, 0), 0, False)
+        self.assertEqual(subtract(0, 0), 0, True)
+        self.assertEqual(subtract(0, 0), 1, False)
     # ##########################
 
     ######## Partner 1
@@ -47,17 +47,17 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(div(0, 0), ZeroDivisionError)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(2,8), 3, True)
-        self.assertEqual(log(2, 8), 2, False)
-        self.assertEqual(log(2, 16), 2, False)
+        self.assertEqual(logarithm(2,8), 3, True)
+        self.assertEqual(logarithm(2, 8), 2, False)
+        self.assertEqual(logarithm(2, 16), 2, False)
 
     def test_log_invalid_base(self): # 1 assertion
         # use same technique from test_divide_by_zero
-        self.assertEqual(log(0, 16), ValueError)
-        self.assertEqual(log(16, 0), ValueError)
-        self.assertEqual(log(-2, 16), ValueError)
-        self.assertEqual(log(2, -16), ValueError)
-        self.assertEqual(log(2, 1), ValueError)
+        self.assertEqual(logarithm(0, 16), ValueError)
+        self.assertEqual(logarithm(16, 0), ValueError)
+        self.assertEqual(logarithm(-2, 16), ValueError)
+        self.assertEqual(logarithm(2, -16), ValueError)
+        self.assertEqual(logarithm(2, 1), ValueError)
     # ##########################
     
     ######## Partner 1
@@ -66,7 +66,7 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
         with self.assertRaises(ValueError):
-            log(0, 5)
+            logarithm(0, 5)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
