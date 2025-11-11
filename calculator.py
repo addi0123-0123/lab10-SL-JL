@@ -22,7 +22,7 @@ def hypotenuse(a, b):
 
 def add(a, b):
     return a+b
-def sub(a, b):
+def subtract(a, b):
     return a-b
 def mul(a, b):
     return a*b
@@ -30,7 +30,7 @@ def div(a, b):
     if b == 0:
         raise ZeroDivisionError
     return a/b
-def log(a, b):
+def logarithm(a, b):
     if b > 0 and b != 1 and a > 0:
         return math.log(b,a)
     raise ValueError
